@@ -61,7 +61,7 @@ Partial Class Leave_Request
         '
         Me.btn_admin_leave.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_admin_leave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_admin_leave.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_admin_leave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_admin_leave.Location = New System.Drawing.Point(673, 383)
         Me.btn_admin_leave.Name = "btn_admin_leave"
         Me.btn_admin_leave.Size = New System.Drawing.Size(119, 37)
@@ -72,10 +72,10 @@ Partial Class Leave_Request
         'lbl_status
         '
         Me.lbl_status.AutoSize = True
-        Me.lbl_status.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lbl_status.Location = New System.Drawing.Point(325, 22)
         Me.lbl_status.Name = "lbl_status"
-        Me.lbl_status.Size = New System.Drawing.Size(141, 25)
+        Me.lbl_status.Size = New System.Drawing.Size(126, 20)
         Me.lbl_status.TabIndex = 16
         Me.lbl_status.Text = "รายชื่อการขอลางาน"
         '
@@ -83,7 +83,7 @@ Partial Class Leave_Request
         '
         Me.btn_disapprove.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_disapprove.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_disapprove.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_disapprove.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_disapprove.Location = New System.Drawing.Point(548, 383)
         Me.btn_disapprove.Name = "btn_disapprove"
         Me.btn_disapprove.Size = New System.Drawing.Size(119, 37)
@@ -95,7 +95,7 @@ Partial Class Leave_Request
         '
         Me.btn_approve.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_approve.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_approve.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_approve.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_approve.Location = New System.Drawing.Point(423, 383)
         Me.btn_approve.Name = "btn_approve"
         Me.btn_approve.Size = New System.Drawing.Size(119, 37)
@@ -107,7 +107,7 @@ Partial Class Leave_Request
         '
         Me.btn_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_back.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_back.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_back.Location = New System.Drawing.Point(17, 383)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(134, 37)

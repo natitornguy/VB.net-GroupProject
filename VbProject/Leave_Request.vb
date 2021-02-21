@@ -17,4 +17,10 @@
     Private Sub Leave_Request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btn_admin_leave_Click(sender As Object, e As EventArgs) Handles btn_admin_leave.Click
+        Dim form = New Leave_User(status)
+        form.Show()
+        Me.Close()
+    End Sub
 End Class
