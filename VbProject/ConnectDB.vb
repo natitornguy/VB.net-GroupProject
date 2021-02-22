@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SQLite
 Public Class ConnectDB
-    Private Shared connection As New SQLiteConnection("Data Source=E:\TNI\VBProject\VBProject\VbProject\Database\HRDB.db;version=3")
+    Private Shared connection As New SQLiteConnection("Data Source=C:\Users\Aum\Desktop\VB Final Project\VbProject\VbProject\Database\HRDB.db;version=3")
     Public Shared Function Noname() 'As DataSet
         connection.Open()
         Dim cmd As New SQLiteCommand

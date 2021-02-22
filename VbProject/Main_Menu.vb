@@ -65,7 +65,7 @@
     End Sub
 
     Private Sub btn_bonus_view_Click(sender As Object, e As EventArgs) Handles btn_bonus_view.Click
-        Dim fbonus As New Bonus_Empinfo(status)
+        Dim fbonus As New Show_Bonus(status)
         fbonus.Show()
         Me.Close()
     End Sub
