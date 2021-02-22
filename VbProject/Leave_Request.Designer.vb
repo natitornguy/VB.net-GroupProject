@@ -49,10 +49,13 @@ Partial Class Leave_Request
         '
         'dtg_empleave
         '
+        Me.dtg_empleave.AllowUserToAddRows = False
+        Me.dtg_empleave.AllowUserToDeleteRows = False
         Me.dtg_empleave.BackgroundColor = System.Drawing.Color.White
         Me.dtg_empleave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtg_empleave.Location = New System.Drawing.Point(17, 70)
         Me.dtg_empleave.Name = "dtg_empleave"
+        Me.dtg_empleave.ReadOnly = True
         Me.dtg_empleave.RowTemplate.Height = 25
         Me.dtg_empleave.Size = New System.Drawing.Size(775, 294)
         Me.dtg_empleave.TabIndex = 18

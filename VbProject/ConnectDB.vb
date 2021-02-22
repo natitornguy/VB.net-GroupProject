@@ -1,14 +1,16 @@
 ﻿Imports System.Data.SQLite
 Public Class ConnectDB
-    Dim connection As New SQLiteConnection("Data Source=E:\TNI\VBProject\VBProject\VbProject\Database\HRDB.db;version=3")
-    Public Function Noname() As String
+    Private Shared connection As New SQLiteConnection("Data Source=E:\TNI\VBProject\VBProject\VbProject\Database\HRDB.db;version=3")
+    Public Shared Function Noname() 'As DataSet
         connection.Open()
         Dim cmd As New SQLiteCommand
         cmd.Connection = connection
         cmd.CommandText = "Select * from leaves"
-        Dim rdr As SQLiteDataReader = cmd.ExecuteReader
-        Debug.WriteLine(rdr)
+        Dim adapter As New SQLiteDataAdapter(cmd)
+        Dim data As New DataSet()
+        adapter.Fill(data, "leave")
+
         connection.Close()
-        Return True
+        Return data
     End Function
 End Class

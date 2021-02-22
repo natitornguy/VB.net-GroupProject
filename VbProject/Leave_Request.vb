@@ -1,5 +1,6 @@
 ﻿Public Class Leave_Request
     Dim status As Integer
+    Dim connectDB As ConnectDB
     Public Sub New(status As Integer)
 
         ' This call is required by the designer.
@@ -15,7 +16,8 @@
     End Sub
 
     Private Sub Leave_Request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim result = connectDB.Noname()
+        dtg_empleave.DataSource = result.Tables("Leave")
     End Sub
 
     Private Sub btn_admin_leave_Click(sender As Object, e As EventArgs) Handles btn_admin_leave.Click
