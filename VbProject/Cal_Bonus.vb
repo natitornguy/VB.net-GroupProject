@@ -32,6 +32,8 @@
         For Each temp In dep_data
             cbo_department.Items.Add(temp)
             Debug.WriteLine(temp)
+            Debug.WriteLine(temp)
+            Debug.WriteLine(temp)
         Next
         cbo_department.SelectedIndex = result(3) - 1
 
