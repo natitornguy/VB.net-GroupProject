@@ -14,7 +14,12 @@ Public Class Show_Bonus
     End Sub
     Private Sub Show_Bonus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim cmdtext = "Select * from employees where emp_id = 1"
-        Dim result = ConnectDB.QueryReader(cmdtext)
+        '' rangecol = จำนวน colum ที่ select ใน sql
+        Dim rangecol = 11
+        Dim result = ConnectDB.QueryReader(cmdtext, rangecol)
+        For Each value In result
+            Debug.WriteLine(value)
+        Next
 
     End Sub
 
