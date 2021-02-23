@@ -20,8 +20,14 @@ Public Class ConnectDB
         cmd.Connection = connection
         cmd.CommandText = cmdtext
         Dim reader As SQLiteDataReader = cmd.ExecuteReader()
-
+        Dim datalist As ArrayList
+        Dim i As Integer
+        While (reader.Read())
+            datalist.Add(reader)
+            i = i + 1
+        End While
         connection.Close()
+
         Return reader
     End Function
 End Class
