@@ -43,7 +43,7 @@ Public Class ConnectDB
         Dim datalist As New ArrayList
         'Debug.WriteLine(rangecol)
         While reader.Read
-            For i As Integer = 0 To rangecol - 1 Step 1
+            For i As Integer = 0 To -1 Step 1
                 'Debug.WriteLine(reader(i))
                 datalist.Add(reader(i))
             Next
