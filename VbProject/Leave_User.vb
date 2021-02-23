@@ -19,4 +19,8 @@ Public Class Leave_User
     Private Sub Leave_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub dtp_start_ValueChanged(sender As Object, e As EventArgs) Handles dtp_start.ValueChanged
+
+    End Sub
 End Class
