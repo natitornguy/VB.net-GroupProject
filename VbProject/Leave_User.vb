@@ -1,4 +1,5 @@
-﻿Public Class Leave_User
+﻿Imports System.Data.SQLite
+Public Class Leave_User
 
     Dim status As Integer
     Public Sub New(status As Integer)
@@ -16,6 +17,10 @@
     End Sub
 
     Private Sub Leave_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub dtp_start_ValueChanged(sender As Object, e As EventArgs) Handles dtp_start.ValueChanged
 
     End Sub
 End Class

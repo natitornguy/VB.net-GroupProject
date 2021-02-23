@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -37,6 +41,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Database\HRDB.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

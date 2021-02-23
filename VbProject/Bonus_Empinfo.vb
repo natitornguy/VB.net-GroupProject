@@ -11,11 +11,14 @@
 
     End Sub
     Private Sub Bonus_Empinfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim sqltext = "select * from employees"
+        Dim result = ConnectDB.QueryAdapter(sqltext)
+        dtg_empinfo.DataSource = result.Tables("data")
     End Sub
 
     Private Sub btn_evaluate_Click(sender As Object, e As EventArgs) Handles btn_evaluate.Click
-        Dim fcal_bonus = New Cal_Bonus(status)
+        Dim id = dtg_empinfo.SelectedRows.Item(0).Cells(0).Value
+        Dim fcal_bonus = New Cal_Bonus(status, id)
         fcal_bonus.Show()
         Me.Close()
     End Sub
