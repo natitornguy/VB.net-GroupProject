@@ -32,6 +32,7 @@
         For Each temp In dep_data
             cbo_department.Items.Add(temp)
             Debug.WriteLine(temp)
+            Debug.WriteLine("Gu Na I Sus")
         Next
         cbo_department.SelectedIndex = result(3) - 1
 
