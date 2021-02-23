@@ -1,6 +1,6 @@
 ﻿Public Class Leave_Request
     Dim status As Integer
-    Dim connectDB As ConnectDB
+    'Dim connectDB As ConnectDB
     Public Sub New(status As Integer)
 
         ' This call is required by the designer.
@@ -16,7 +16,8 @@
     End Sub
 
     Private Sub Leave_Request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim result = connectDB.Noname()
+        Dim cmdtext = "Select * from leaves"
+        Dim result = ConnectDB.QueryAdapter(cmdtext)
         dtg_empleave.DataSource = result.Tables("Leave")
     End Sub
 
