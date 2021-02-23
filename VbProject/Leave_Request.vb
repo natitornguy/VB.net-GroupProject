@@ -18,7 +18,7 @@
     Private Sub Leave_Request_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim cmdtext = "Select * from leaves"
         Dim result = ConnectDB.QueryAdapter(cmdtext)
-        dtg_empleave.DataSource = result.Tables("Leave")
+        dtg_empleave.DataSource = result.Tables("data")
     End Sub
 
     Private Sub btn_admin_leave_Click(sender As Object, e As EventArgs) Handles btn_admin_leave.Click

@@ -6,9 +6,11 @@
             user = 0
         ElseIf txt_username.Text = "user" Then
             user = 1
+        Else
+            user = 1
         End If
         Dim main = New Main_Menu(user)
-            main.Show()
+        main.Show()
         Me.Close()
     End Sub
 

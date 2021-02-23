@@ -61,11 +61,13 @@ Partial Class Bonus_Empinfo
         '
         'dtg_empinfo
         '
+        Me.dtg_empinfo.AllowUserToAddRows = False
         Me.dtg_empinfo.BackgroundColor = System.Drawing.Color.White
         Me.dtg_empinfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dtg_empinfo.Location = New System.Drawing.Point(18, 113)
         Me.dtg_empinfo.Name = "dtg_empinfo"
         Me.dtg_empinfo.RowTemplate.Height = 25
+        Me.dtg_empinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dtg_empinfo.Size = New System.Drawing.Size(775, 286)
         Me.dtg_empinfo.TabIndex = 17
         '
