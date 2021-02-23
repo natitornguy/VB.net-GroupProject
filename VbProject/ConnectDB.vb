@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SQLite
 Public Class ConnectDB
-    Private Shared connection As New SQLiteConnection("Data Source=C:\Users\Aum\Desktop\VB Final Project\VbProject\VbProject\Database\HRDB.db;version=3")
+    Private Shared connection As New SQLiteConnection("Data Source=E:\TNI\VBProject\VBProject\VbProject\Database\HRDB.db;version=3")
     Public Shared Function QueryAdapter(cmdtext As String) 'As DataSet
         connection.Open()
         Dim cmd As New SQLiteCommand
@@ -32,5 +32,23 @@ Public Class ConnectDB
         connection.Close()
 
         Return datalist
+    End Function
+
+    Public Shared Function editData(cmdtext As String)
+        connection.Open()
+        Dim cmd As New SQLiteCommand
+        cmd.Connection = connection
+        cmd.CommandText = "UPDATE "
+        Dim reader As SQLiteDataReader = cmd.ExecuteReader()
+        Dim datalist As New ArrayList
+        'Debug.WriteLine(rangecol)
+        While reader.Read
+            For i As Integer = 0 To rangecol - 1 Step 1
+                'Debug.WriteLine(reader(i))
+                datalist.Add(reader(i))
+            Next
+        End While
+        connection.Close()
+        Return True
     End Function
 End Class

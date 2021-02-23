@@ -26,4 +26,8 @@
         form.Show()
         Me.Close()
     End Sub
+
+    Private Sub btn_approve_Click(sender As Object, e As EventArgs) Handles btn_approve.Click
+
+    End Sub
 End Class
