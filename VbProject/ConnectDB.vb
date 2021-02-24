@@ -14,6 +14,7 @@ Public Class ConnectDB
             adp.Fill(data, "data")
         Catch ex As MySqlException
             MessageBox.Show("Error : " & ex.ToString)
+            conn.Close()
         End Try
         conn.Close()
         Return data
@@ -32,6 +33,7 @@ Public Class ConnectDB
             End While
         Catch ex As MySqlException
             MessageBox.Show("Error : " & ex.ToString)
+            conn.Close()
         End Try
         conn.Close()
 
@@ -46,6 +48,7 @@ Public Class ConnectDB
         Catch ex As Exception
             MessageBox.Show("Error : " & ex.ToString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
+            conn.Close()
         End Try
         conn.Close()
         Return True
@@ -63,6 +66,7 @@ Public Class ConnectDB
             End While
         Catch ex As MySqlException
             MessageBox.Show("Error : " & ex.ToString)
+            conn.Close()
         End Try
         conn.Close()
 

@@ -1,11 +1,13 @@
 ﻿Public Class Cal_Bonus
     Dim status As Integer
+    Dim userid As Integer
     Dim id As Integer
-    Public Sub New(status As Integer, id As Integer)
+    Public Sub New(status As Integer, curid As Integer, id As Integer)
 
         ' This call is required by the designer.
         InitializeComponent()
         Me.status = status
+        Me.userid = curid
         Me.id = id
         ' Add any initialization after the InitializeComponent() call.
 
@@ -40,14 +42,14 @@
 
         If ConnectDB.ExecuteData(sqlupdate) Then
             MessageBox.Show("ประเมินพนักงาน " & fullname & " เรียบร้อย", "Update Grade", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Dim fbonus_info As New Bonus_Empinfo(status)
+            Dim fbonus_info As New Bonus_Empinfo(status, userid)
             fbonus_info.Show()
             Me.Close()
         End If
     End Sub
 
     Private Sub btn_back_Click(sender As Object, e As EventArgs) Handles btn_back.Click
-        Dim fbonus_info As New Bonus_Empinfo(status)
+        Dim fbonus_info As New Bonus_Empinfo(status, userid)
         fbonus_info.Show()
         Me.Close()
     End Sub

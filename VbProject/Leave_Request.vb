@@ -1,10 +1,12 @@
 ﻿Public Class Leave_Request
     Dim status As Integer
+    Dim id As Integer
     'Dim connectDB As ConnectDB
-    Public Sub New(status As Integer)
+    Public Sub New(status As Integer, id As Integer)
         ' This call is required by the designer.
         InitializeComponent()
         Me.status = status
+        Me.id = id
         ' Add any initialization after the InitializeComponent() call.
         Select Case Me.status
             Case 1
@@ -14,7 +16,7 @@
         End Select
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btn_back.Click
-        Dim fmain As New Main_Menu(status)
+        Dim fmain As New Main_Menu(status, id)
         fmain.Show()
         Me.Close()
     End Sub
@@ -34,7 +36,7 @@
         dtgLeaveRequests.DataSource = result.Tables("data")
     End Sub
     Private Sub btn_admin_leave_Click(sender As Object, e As EventArgs) Handles btn_admin_leave.Click
-        Dim form = New Leave_User(status)
+        Dim form = New Leave_User(status, id)
         form.Show()
         Me.Close()
     End Sub

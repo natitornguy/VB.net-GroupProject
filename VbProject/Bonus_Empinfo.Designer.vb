@@ -23,6 +23,7 @@ Partial Class Bonus_Empinfo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_showbonus = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtg_empinfo = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -37,6 +38,7 @@ Partial Class Bonus_Empinfo
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btn_showbonus)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.dtg_empinfo)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -49,15 +51,28 @@ Partial Class Bonus_Empinfo
         Me.Panel1.Size = New System.Drawing.Size(812, 471)
         Me.Panel1.TabIndex = 14
         '
+        'btn_showbonus
+        '
+        Me.btn_showbonus.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
+        Me.btn_showbonus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_showbonus.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_showbonus.Location = New System.Drawing.Point(571, 418)
+        Me.btn_showbonus.Name = "btn_showbonus"
+        Me.btn_showbonus.Size = New System.Drawing.Size(108, 37)
+        Me.btn_showbonus.TabIndex = 19
+        Me.btn_showbonus.Text = "ดูโบนัส"
+        Me.btn_showbonus.UseVisualStyleBackColor = False
+        Me.btn_showbonus.Visible = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(16, 38)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 25)
+        Me.Label2.Size = New System.Drawing.Size(188, 25)
         Me.Label2.TabIndex = 18
-        Me.Label2.Text = "ค้นหาโดย ชื่อ"
+        Me.Label2.Text = "ค้นหาโดย ชื่อ หรือ นามสกุล"
         '
         'dtg_empinfo
         '
@@ -98,7 +113,7 @@ Partial Class Bonus_Empinfo
         Me.btn_search.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_search.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btn_search.Location = New System.Drawing.Point(165, 66)
+        Me.btn_search.Location = New System.Drawing.Point(191, 66)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(85, 31)
         Me.btn_search.TabIndex = 7
@@ -111,8 +126,8 @@ Partial Class Bonus_Empinfo
         Me.txt_fname_search.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_fname_search.Location = New System.Drawing.Point(18, 66)
         Me.txt_fname_search.Name = "txt_fname_search"
-        Me.txt_fname_search.PlaceholderText = "กรอก ชื่อ"
-        Me.txt_fname_search.Size = New System.Drawing.Size(141, 31)
+        Me.txt_fname_search.PlaceholderText = "กรอก ชื่อ หรือ นามสกุล"
+        Me.txt_fname_search.Size = New System.Drawing.Size(167, 31)
         Me.txt_fname_search.TabIndex = 12
         '
         'btn_back
@@ -154,4 +169,5 @@ Partial Class Bonus_Empinfo
     Friend WithEvents txt_fname_search As TextBox
     Friend WithEvents btn_back As Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents btn_showbonus As Button
 End Class
