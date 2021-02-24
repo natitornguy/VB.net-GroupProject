@@ -2,12 +2,16 @@
     Dim status As Integer
     'Dim connectDB As ConnectDB
     Public Sub New(status As Integer)
-
         ' This call is required by the designer.
         InitializeComponent()
         Me.status = status
         ' Add any initialization after the InitializeComponent() call.
-
+        Select Case Me.status
+            Case 1
+                btn_approve.Hide()
+                btn_disapprove.Hide()
+                Exit Select
+        End Select
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btn_back.Click
         Dim fmain As New Main_Menu(status)

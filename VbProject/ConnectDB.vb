@@ -39,18 +39,15 @@ Public Class ConnectDB
     End Function
 
     Public Shared Function editData(cmdtext As String)
-        'conn.Open()
-        'Dim cmd As New SQLiteCommand
-        'cmd.Connection = conn
-        'cmd.CommandText = cmdtext
-        'Try
-        '    cmd.ExecuteNonQuery()
-        'Catch ex As Exception
-        '    conn.Close()
-        '    MessageBox.Show("Error : " & ex.ToString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        '    Return False
-        'End Try
-        'conn.Close()
-        'Return True
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand(cmdtext, conn)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show("Error : " & ex.ToString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+        conn.Close()
+        Return True
     End Function
 End Class
