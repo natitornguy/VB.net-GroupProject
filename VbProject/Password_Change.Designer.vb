@@ -27,13 +27,13 @@ Partial Class Password_Change
         Me.txt_npass = New System.Windows.Forms.TextBox()
         Me.btn_save = New System.Windows.Forms.Button()
         Me.P_User = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txt_cpass = New System.Windows.Forms.TextBox()
         Me.btn_back = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_cpass = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.P_User.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,6 +98,26 @@ Partial Class Password_Change
         Me.P_User.Size = New System.Drawing.Size(380, 352)
         Me.P_User.TabIndex = 9
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(16, 211)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(107, 25)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "ยืนยันรหัสผ่าน"
+        '
+        'txt_cpass
+        '
+        Me.txt_cpass.BackColor = System.Drawing.Color.White
+        Me.txt_cpass.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_cpass.Location = New System.Drawing.Point(137, 208)
+        Me.txt_cpass.Name = "txt_cpass"
+        Me.txt_cpass.PlaceholderText = "ยืนยันรหัสผ่าน"
+        Me.txt_cpass.Size = New System.Drawing.Size(186, 31)
+        Me.txt_cpass.TabIndex = 6
+        '
         'btn_back
         '
         Me.btn_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
@@ -106,7 +126,7 @@ Partial Class Password_Change
         Me.btn_back.Location = New System.Drawing.Point(47, 280)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(123, 38)
-        Me.btn_back.TabIndex = 13
+        Me.btn_back.TabIndex = 8
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '
@@ -149,26 +169,6 @@ Partial Class Password_Change
         Me.Label1.Size = New System.Drawing.Size(145, 25)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "ระบบเปลี่ยนรหัสผ่าน"
-        '
-        'txt_cpass
-        '
-        Me.txt_cpass.BackColor = System.Drawing.Color.White
-        Me.txt_cpass.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txt_cpass.Location = New System.Drawing.Point(137, 208)
-        Me.txt_cpass.Name = "txt_cpass"
-        Me.txt_cpass.PlaceholderText = "ยืนยันรหัสผ่าน"
-        Me.txt_cpass.Size = New System.Drawing.Size(186, 31)
-        Me.txt_cpass.TabIndex = 14
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(16, 211)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 25)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "ยืนยันรหัสผ่าน"
         '
         'Password_Change
         '

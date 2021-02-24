@@ -104,6 +104,7 @@ Partial Class Show_Employee
         Me.dtg_empinfo.Location = New System.Drawing.Point(18, 113)
         Me.dtg_empinfo.Name = "dtg_empinfo"
         Me.dtg_empinfo.RowTemplate.Height = 25
+        Me.dtg_empinfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dtg_empinfo.Size = New System.Drawing.Size(775, 286)
         Me.dtg_empinfo.TabIndex = 17
         '

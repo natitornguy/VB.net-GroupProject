@@ -13,8 +13,9 @@ Public Class ConnectDB
             Dim adp As New MySqlDataAdapter(cmd)
             adp.Fill(data, "data")
         Catch ex As MySqlException
-            MessageBox.Show("Error : " & ex.ToString)
             conn.Close()
+            MessageBox.Show("Error : " & ex.ToString)
+
         End Try
         conn.Close()
         Return data
@@ -32,8 +33,9 @@ Public Class ConnectDB
                 Next
             End While
         Catch ex As MySqlException
-            MessageBox.Show("Error : " & ex.ToString)
             conn.Close()
+            MessageBox.Show("Error : " & ex.ToString)
+
         End Try
         conn.Close()
 
@@ -46,9 +48,9 @@ Public Class ConnectDB
             Dim cmd As New MySqlCommand(cmdtext, conn)
             cmd.ExecuteNonQuery()
         Catch ex As Exception
+            conn.Close()
             MessageBox.Show("Error : " & ex.ToString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
-            conn.Close()
         End Try
         conn.Close()
         Return True
@@ -65,8 +67,9 @@ Public Class ConnectDB
                 data = reader(0)
             End While
         Catch ex As MySqlException
-            MessageBox.Show("Error : " & ex.ToString)
             conn.Close()
+            MessageBox.Show("Error : " & ex.ToString)
+
         End Try
         conn.Close()
 

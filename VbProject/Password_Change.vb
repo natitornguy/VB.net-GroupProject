@@ -17,7 +17,8 @@
         txt_npass.Clear()
         txt_opass.Clear()
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+
+    Private Sub updatepass()
         If txt_npass.Text = txt_cpass.Text Then
             Dim npw = txt_npass.Text
             Dim cuser = ConnectDB.QueryGetone("SELECT  count(username)
@@ -26,7 +27,7 @@
                                                 "' AND PASSWORD = '" & txt_opass.Text & "'")
             If cuser = 1 Then
                 ConnectDB.ExecuteData("update users 
-                            set password = " & npw &
+                            set password = '" & npw & "'" &
                            " where emp_id = " & id)
                 MessageBox.Show("แก้ไขรหัสผ่านแล้ว", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Dim fmain As New Main_Menu(status, id)
@@ -41,8 +42,9 @@
             cleartxt()
 
         End If
-
-
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_save.Click
+        updatepass()
 
     End Sub
 

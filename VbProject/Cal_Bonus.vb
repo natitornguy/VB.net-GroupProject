@@ -29,8 +29,7 @@
 
     Private Sub evaluate_emp()
         Dim gradeid = cbo_grade.SelectedIndex + 1
-        Dim sqltext = "select mas_grade_bonus from mas_grade where mas_grade_id = " & gradeid
-        Dim gradenum = ConnectDB.QueryGetone(sqltext)
+        Dim gradenum = ConnectDB.QueryGetone("select mas_grade_bonus from mas_grade where mas_grade_id = " & gradeid)
         Dim data = ConnectDB.QueryReader("select emp_salary,CONCAT(emp_fname,' ',emp_lname) from employees where emp_id = " & id, 2)
         Dim salary As Double = data(0)
         Dim fullname = data(1)
