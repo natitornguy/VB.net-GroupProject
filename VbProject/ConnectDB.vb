@@ -59,7 +59,7 @@ Public Class ConnectDB
             Dim cmd As New MySqlCommand(cmdtext, conn)
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
             While reader.Read
-                bonus = reader(0)
+                data = reader(0)
             End While
         Catch ex As MySqlException
             MessageBox.Show("Error : " & ex.ToString)

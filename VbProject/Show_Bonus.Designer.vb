@@ -62,7 +62,7 @@ Partial Class Show_Bonus
         '
         Me.lbl_sum_salary.AutoSize = True
         Me.lbl_sum_salary.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_sum_salary.Location = New System.Drawing.Point(249, 324)
+        Me.lbl_sum_salary.Location = New System.Drawing.Point(251, 343)
         Me.lbl_sum_salary.Name = "lbl_sum_salary"
         Me.lbl_sum_salary.Size = New System.Drawing.Size(28, 25)
         Me.lbl_sum_salary.TabIndex = 34
@@ -72,7 +72,7 @@ Partial Class Show_Bonus
         '
         Me.lbl_bonus.AutoSize = True
         Me.lbl_bonus.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_bonus.Location = New System.Drawing.Point(249, 262)
+        Me.lbl_bonus.Location = New System.Drawing.Point(251, 281)
         Me.lbl_bonus.Name = "lbl_bonus"
         Me.lbl_bonus.Size = New System.Drawing.Size(28, 25)
         Me.lbl_bonus.TabIndex = 33
@@ -82,7 +82,7 @@ Partial Class Show_Bonus
         '
         Me.lbl_grade.AutoSize = True
         Me.lbl_grade.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_grade.Location = New System.Drawing.Point(249, 200)
+        Me.lbl_grade.Location = New System.Drawing.Point(251, 219)
         Me.lbl_grade.Name = "lbl_grade"
         Me.lbl_grade.Size = New System.Drawing.Size(28, 25)
         Me.lbl_grade.TabIndex = 32
@@ -92,7 +92,7 @@ Partial Class Show_Bonus
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(66, 324)
+        Me.Label8.Location = New System.Drawing.Point(68, 343)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(97, 25)
         Me.Label8.TabIndex = 31
@@ -102,7 +102,7 @@ Partial Class Show_Bonus
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(66, 262)
+        Me.Label7.Location = New System.Drawing.Point(68, 281)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 25)
         Me.Label7.TabIndex = 30
@@ -112,7 +112,7 @@ Partial Class Show_Bonus
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(66, 200)
+        Me.Label6.Location = New System.Drawing.Point(68, 219)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 25)
         Me.Label6.TabIndex = 29
@@ -122,7 +122,7 @@ Partial Class Show_Bonus
         '
         Me.lbl_salary.AutoSize = True
         Me.lbl_salary.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_salary.Location = New System.Drawing.Point(249, 136)
+        Me.lbl_salary.Location = New System.Drawing.Point(251, 155)
         Me.lbl_salary.Name = "lbl_salary"
         Me.lbl_salary.Size = New System.Drawing.Size(28, 25)
         Me.lbl_salary.TabIndex = 28
@@ -132,7 +132,7 @@ Partial Class Show_Bonus
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(66, 136)
+        Me.Label4.Location = New System.Drawing.Point(68, 155)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 25)
         Me.Label4.TabIndex = 27
@@ -142,7 +142,7 @@ Partial Class Show_Bonus
         '
         Me.lbl_leavedate.AutoSize = True
         Me.lbl_leavedate.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_leavedate.Location = New System.Drawing.Point(249, 72)
+        Me.lbl_leavedate.Location = New System.Drawing.Point(251, 91)
         Me.lbl_leavedate.Name = "lbl_leavedate"
         Me.lbl_leavedate.Size = New System.Drawing.Size(28, 25)
         Me.lbl_leavedate.TabIndex = 26
@@ -152,7 +152,7 @@ Partial Class Show_Bonus
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(66, 72)
+        Me.Label2.Location = New System.Drawing.Point(68, 91)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(135, 25)
         Me.Label2.TabIndex = 25
@@ -160,13 +160,13 @@ Partial Class Show_Bonus
         '
         'lbl_empname
         '
-        Me.lbl_empname.AutoSize = True
         Me.lbl_empname.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_empname.Location = New System.Drawing.Point(159, 21)
+        Me.lbl_empname.Location = New System.Drawing.Point(0, 21)
         Me.lbl_empname.Name = "lbl_empname"
-        Me.lbl_empname.Size = New System.Drawing.Size(90, 25)
+        Me.lbl_empname.Size = New System.Drawing.Size(409, 25)
         Me.lbl_empname.TabIndex = 24
         Me.lbl_empname.Text = "ข้อมูลของ ..."
+        Me.lbl_empname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btn_back
         '

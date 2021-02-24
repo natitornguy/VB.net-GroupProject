@@ -12,13 +12,21 @@ Public Class Show_Bonus
 
     End Sub
     Private Sub Show_Bonus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim cmdtext = "Select * from employees where emp_id = 1"
-        '' rangecol = จำนวน colum ที่ select ใน sql
-        Dim rangecol = 11
-        Dim result = ConnectDB.QueryReader(cmdtext, rangecol)
-        For Each value In result
-            Debug.WriteLine(value)
-        Next
+        Dim cmdtext = "Select CONCAT(emp_fname,' ',emp_lname),leave_count,emp_salary,g.MAS_GRADE_NAME,emp_bonus
+                        from employees e
+                        JOIN mas_grade g
+                        ON g.MAS_GRADE_ID = e.GRADE
+                        where emp_id = 1"
+        '' (!,?) ? = จำนวน colum ที่ select ใน sql
+        Dim result = ConnectDB.QueryReader(cmdtext, 5)
+        lbl_empname.Text = result(0)
+        lbl_leavedate.Text = result(1)
+        lbl_salary.Text = result(2)
+        lbl_grade.Text = result(3)
+        lbl_bonus.Text = result(4)
+        lbl_sum_salary.Text = result(2) + result(4)
+
+
 
     End Sub
 
