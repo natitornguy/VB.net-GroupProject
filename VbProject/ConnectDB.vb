@@ -52,7 +52,8 @@ Public Class ConnectDB
     End Function
 
     Public Shared Function QueryGetone(cmdtext As String)
-        Dim bonus As Double
+        'อยากได้ไร 1 อันเอาไป
+        Dim data As Object
         Try
             conn.Open()
             Dim cmd As New MySqlCommand(cmdtext, conn)
@@ -65,7 +66,7 @@ Public Class ConnectDB
         End Try
         conn.Close()
 
-        Return bonus
+        Return data
     End Function
 
 End Class
