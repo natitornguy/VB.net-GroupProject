@@ -1,4 +1,5 @@
-﻿Public Class Add_Edit_Employee
+﻿Imports System.Text.RegularExpressions
+Public Class Add_Edit_Employee
 
     Dim id As Integer
     Dim dtgid As Integer
@@ -11,6 +12,19 @@
         Me.status = mode
         Me.userstatus = status
     End Sub
+
+    Private Function showMatch(ByVal text As String, ByVal expr As String)
+        Dim regex As New Regex(expr)
+        Dim match As Match = regex.Match(text)
+        If match.Success Then
+            Return True
+        Else
+            Return False
+        End If
+        'For Each m In mc
+        '    Debug.WriteLine(m)
+        'Next m
+    End Function
 
     Public Sub NumeberOnly(ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Asc(e.KeyChar) >= 48 And Asc(e.KeyChar) <= 57 Or Asc(e.KeyChar) = 46 Or Asc(e.KeyChar) = 8 Then
@@ -45,6 +59,18 @@
 
 
     End Sub
+    Private Sub idgenerate()
+        Dim fname = txt_fname.Text
+        Dim lname = txt_lname.Text
+        Dim pphone = txt_phone.Text.Replace("-", "")
+        Dim username = lname.Substring(0, 2) & "." & fname
+        Dim sqlempid As Integer = ConnectDB.QueryGetone("SELECT emp_id 
+                                                        FROM employees 
+                                                        WHERE emp_fname = '" & fname & "' AND emp_lname = '" & lname & "' AND emp_phone = '" & pphone & "'")
+
+        ConnectDB.ExecuteData("insert into users (username, password, emp_id, role_id)
+                                VALUES ('" & username & "','" & pphone & "','" & sqlempid & "','" & findAdmin() & "')")
+    End Sub
     Private Sub btn_back_Click(sender As Object, e As EventArgs) Handles btn_back.Click
         Dim femp_info As New Show_Employee(userstatus, id)
         femp_info.Show()
@@ -59,18 +85,21 @@
         End If
     End Function
 
-    Private Sub insertdata()
-        Dim sql As String = "insert into employees (emp_fname,emp_lname,emp_phone,emp_email,emp_address,emp_salary,emp_bonus,leave_count,dep_id)
-                VALUES ('" & txt_fname.Text &
-                "','" & txt_lname.Text &
-                "','" & txt_phone.Text &
-                "','" & txt_email.Text &
-                "','" & txt_address.Text &
-                "'," & txt_salary.Text &
-                "0,30," & cbo_department.SelectedIndex + 1 & ")"
+    Private Sub insertData()
+        'Dim sql As String = "insert into employees (emp_fname,emp_lname,emp_phone,emp_email,emp_address,emp_salary,emp_bonus,leave_count,dep_id)
+        '        VALUES ('" & txt_fname.Text &
+        '        "','" & txt_lname.Text &
+        '        "','" & txt_phone.Text &
+        '        "','" & txt_email.Text &
+        '        "','" & txt_address.Text &
+        '        "'," & txt_salary.Text &
+        '        "0,30," & cbo_department.SelectedIndex + 1 & ")"
+        Dim sql = "insert into employees (emp_fname,emp_lname,emp_phone,emp_email,emp_address,emp_salary,emp_bonus,leave_count,dep_id)
+                VALUES ('" & txt_fname.Text & "','" & txt_lname.Text & "','" & txt_phone.Text & "','" & txt_email.Text & "','" & txt_address.Text & "'," & txt_salary.Text & ",0,30," & cbo_department.SelectedIndex + 1 & ")"
 
         If ConnectDB.ExecuteData(sql) Then
             MessageBox.Show("เพื่มข้อมูลสำเร็จแล้ว", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            idgenerate()
         End If
         Dim femp_info As New Show_Employee(userstatus, id)
         femp_info.Show()
@@ -89,7 +118,7 @@
         Return emp_bonus
     End Function
 
-    Private Sub updatedata()
+    Private Sub updateData()
 
         Dim currstatus As Integer
         ' find null at bonus
@@ -133,11 +162,32 @@
     End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
-        If status = 0 Then
-            insertdata()
-        ElseIf status = 1 Then
-            updatedata()
+        Dim checkemail = showMatch(txt_email.Text, "^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$")
+
+        Dim checkfname = showMatch(txt_fname.Text, "^[a-zA-Z\s]+$")
+        Dim checkfnameth = showMatch(txt_fname.Text, "^[ก-๏\s]+$")
+
+        Dim checklname = showMatch(txt_lname.Text, "^[a-zA-Z\s]+$")
+        Dim checklnameth = showMatch(txt_lname.Text, "^[ก-๏\s]+$")
+
+        If (checkfname Or checkfnameth) Then
+            If (checklname Or checklnameth) Then
+                If checkemail Then
+                    If status = 0 Then
+                        insertData()
+                    ElseIf status = 1 Then
+                        updateData()
+                    End If
+                Else
+                    MessageBox.Show("กรุณากรอกอีเมล .com", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            Else
+                MessageBox.Show("กรุณากรอกนามสกุลด้วยตัวอักษรเท่านั้น", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            End If
+        Else
+            MessageBox.Show("กรุณากรอกชื่อด้วยตัวอักษรเท่านั้น", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+
 
     End Sub
 

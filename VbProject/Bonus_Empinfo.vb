@@ -14,12 +14,12 @@
 
     Private Sub loaddata(param)
         Dim sqltext = "select emp_id as ID,
-                        CONCAT(emp_fname,' ',emp_lname) as NAME,
-                        emp_salary as SALARY,
-                        emp_bonus as BONUS,
-                        leave_count as LEAVE_LEFT,
-                        dep_name as DEPARTMENT,
-                        grade as GRADE
+                        CONCAT(emp_fname,' ',emp_lname) as 'ชื่อนามสกุล',
+                        emp_salary as 'เงินเดือน',
+                        emp_bonus as 'โบนัส',
+                        leave_count as 'วันลาที่เหลือ',
+                        dep_name as 'แผนก',
+                        grade as 'เกรด'
                         from employees e
                         JOIN departments d
                         ON e.DEP_ID = d.DEP_ID

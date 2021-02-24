@@ -160,10 +160,10 @@ Partial Class Show_Bonus
         '
         'lbl_empname
         '
-        Me.lbl_empname.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lbl_empname.Font = New System.Drawing.Font("Kanit", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lbl_empname.Location = New System.Drawing.Point(0, 21)
         Me.lbl_empname.Name = "lbl_empname"
-        Me.lbl_empname.Size = New System.Drawing.Size(409, 25)
+        Me.lbl_empname.Size = New System.Drawing.Size(409, 37)
         Me.lbl_empname.TabIndex = 24
         Me.lbl_empname.Text = "ข้อมูลของ ..."
         Me.lbl_empname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

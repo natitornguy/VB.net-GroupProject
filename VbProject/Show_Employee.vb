@@ -23,11 +23,20 @@
         dtg_empinfo.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         dtg_empinfo.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         dtg_empinfo.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        dtg_empinfo.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+
     End Sub
 
     Private Sub showdata(param)
-        Dim cmdtext = "Select * 
+        Dim cmdtext = "Select emp_id as 'รหัสพนักงาน',
+                        concat(emp_fname,' ', emp_lname) as 'ชื่อนามสกุล',
+                        emp_phone as 'เบอร์โทร',
+                        emp_email as 'อีเมล',
+emp_address as 'ที่อยู่',
+emp_salary as 'เงินเดือน',
+emp_bonus as 'โบนัส',
+leave_count as 'วันลาที่เหลือ',
+dep_id as 'แผนก',
+grade as 'เกรด'
                         from employees
                         where emp_fname like '%" & param & "%' or
                         emp_lname like '%" & param & "%'"
@@ -39,11 +48,11 @@
     Private Sub deletedata()
         Dim result As DialogResult = MessageBox.Show("คุณต้องการลบ " & dtg_empinfo.SelectedRows.Item(0).Cells(1).Value & " หรือไม่", "Delete Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
-            Dim id As Integer = dtg_empinfo.SelectedRows.Item(0).Cells("emp_id").Value
+            Dim id As Integer = dtg_empinfo.SelectedRows.Item(0).Cells(0).Value
             Dim cmdtext = "Delete from employees where emp_id= " & id
             'Dim result = ConnectDB.ExecuteData(cmdtext)
 
-            If ConnectDB.ExecuteData(cmdtext) Then
+            If ConnectDB.ExecuteData(cmdtext) And ConnectDB.ExecuteData("delete from users where emp_id =" & id) Then
                 MessageBox.Show("ลบข้อมููลเรียบร้อยแล้ว", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 showdata("")
             End If
