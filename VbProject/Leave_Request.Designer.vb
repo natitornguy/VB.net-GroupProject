@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Leave_Request
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,38 @@ Partial Class Leave_Request
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim dtg_empleave As System.Windows.Forms.DataGridView
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dtg_empleave = New System.Windows.Forms.DataGridView()
         Me.btn_admin_leave = New System.Windows.Forms.Button()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.btn_disapprove = New System.Windows.Forms.Button()
         Me.btn_approve = New System.Windows.Forms.Button()
         Me.btn_back = New System.Windows.Forms.Button()
+        dtg_empleave = New System.Windows.Forms.DataGridView()
+        CType(dtg_empleave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.dtg_empleave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'dtg_empleave
+        '
+        dtg_empleave.AllowUserToAddRows = False
+        dtg_empleave.AllowUserToDeleteRows = False
+        dtg_empleave.BackgroundColor = System.Drawing.Color.White
+        dtg_empleave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dtg_empleave.Location = New System.Drawing.Point(17, 70)
+        dtg_empleave.Name = "dtg_empleave"
+        dtg_empleave.ReadOnly = True
+        dtg_empleave.RowTemplate.Height = 25
+        dtg_empleave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        dtg_empleave.Size = New System.Drawing.Size(775, 294)
+        dtg_empleave.TabIndex = 18
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.dtg_empleave)
+        Me.Panel1.Controls.Add(dtg_empleave)
         Me.Panel1.Controls.Add(Me.btn_admin_leave)
         Me.Panel1.Controls.Add(Me.lbl_status)
         Me.Panel1.Controls.Add(Me.btn_disapprove)
@@ -46,19 +61,6 @@ Partial Class Leave_Request
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(812, 442)
         Me.Panel1.TabIndex = 14
-        '
-        'dtg_empleave
-        '
-        Me.dtg_empleave.AllowUserToAddRows = False
-        Me.dtg_empleave.AllowUserToDeleteRows = False
-        Me.dtg_empleave.BackgroundColor = System.Drawing.Color.White
-        Me.dtg_empleave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dtg_empleave.Location = New System.Drawing.Point(17, 70)
-        Me.dtg_empleave.Name = "dtg_empleave"
-        Me.dtg_empleave.ReadOnly = True
-        Me.dtg_empleave.RowTemplate.Height = 25
-        Me.dtg_empleave.Size = New System.Drawing.Size(775, 294)
-        Me.dtg_empleave.TabIndex = 18
         '
         'btn_admin_leave
         '
@@ -130,9 +132,9 @@ Partial Class Leave_Request
         Me.Name = "Leave_Request"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Leave_Admin"
+        CType(dtg_empleave, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dtg_empleave, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
