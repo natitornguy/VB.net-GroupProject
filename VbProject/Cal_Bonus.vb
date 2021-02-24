@@ -51,5 +51,6 @@
         txt_department.Text = result(3)
         cbo_grade.SelectedIndex = If(IsDBNull(result(4)), -1, result(4) - 1)
 
+
     End Sub
 End Class
