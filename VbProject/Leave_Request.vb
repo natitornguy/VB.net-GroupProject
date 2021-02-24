@@ -42,7 +42,7 @@
     Private Sub btn_approve_Click(sender As Object, e As EventArgs) Handles btn_approve.Click
         Dim id As Integer = dtgLeaveRequests.SelectedRows.Item(0).Cells("emp_id").Value
         Dim cmdtext = "UPDATE LEAVES SET leave_status = 2 WHERE leave_id = " & id
-        If ConnectDB.editData(cmdtext) Then
+        If ConnectDB.ExecuteData(cmdtext) Then
             MessageBox.Show("ยอมรับคำร้องขอการลาเรียบร้อย", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             addLeaveRequestsToTable()
         End If
@@ -51,7 +51,7 @@
     Private Sub btn_disapprove_Click(sender As Object, e As EventArgs) Handles btn_disapprove.Click
         Dim id As Integer = dtgLeaveRequests.SelectedRows.Item(0).Cells("emp_id").Value
         Dim cmdtext = "UPDATE LEAVES SET leave_status = 3 WHERE leave_id = " & id
-        If ConnectDB.editData(cmdtext) Then
+        If ConnectDB.ExecuteData(cmdtext) Then
             MessageBox.Show("ปฏิเสธคำร้องขอการลาเรียบร้อย", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             addLeaveRequestsToTable()
         End If

@@ -11,7 +11,10 @@
 
     End Sub
     Private Sub Bonus_Empinfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim sqltext = "select * from employees"
+        Dim sqltext = "select emp_id,CONCAT(emp_fname,' ',emp_lname) as name,emp_salary,emp_bonus,leave_count,dep_name,grade
+                        from employees e
+                        JOIN departments d
+                        ON e.DEP_ID = d.DEP_ID"
         Dim result = ConnectDB.QueryAdapter(sqltext)
         dtg_empinfo.DataSource = result.Tables("data")
     End Sub

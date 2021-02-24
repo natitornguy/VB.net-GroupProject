@@ -3,7 +3,6 @@
 Public Class Show_Bonus
 
     Dim status As Integer
-    Private connection As New SQLiteConnection("Data Source=C:\Users\Aum\Desktop\VB Final Project\VbProject\VbProject\Database\HRDB.db;version=3")
     Public Sub New(status As Integer)
 
         ' This call is required by the designer.

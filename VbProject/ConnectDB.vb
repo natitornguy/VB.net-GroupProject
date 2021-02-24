@@ -19,27 +19,26 @@ Public Class ConnectDB
         Return data
     End Function
 
-    Public Shared Function QueryReader(cmdtext As String, rangecol As Integer)
-        '' rangecol = จำนวน colum ที่ select ใน sql
-        'conn.Open()
-        'Dim cmd As New SQLiteCommand
-        'cmd.Connection = conn
-        'cmd.CommandText = cmdtext
-        'Dim reader As SQLiteDataReader = cmd.ExecuteReader()
-        'Dim datalist As New ArrayList
-        ''Debug.WriteLine(rangecol)
-        'While reader.Read
-        '    For i As Integer = 0 To rangecol - 1 Step 1
-        '        'Debug.WriteLine(reader(i))
-        '        datalist.Add(reader(i))
-        '    Next
-        'End While
-        'conn.Close()
+    Public Shared Function QueryReader(cmdtext As String, col As Integer)
+        Dim datalist As New ArrayList()
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand(cmdtext, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            While reader.Read
+                For i As Integer = 0 To col - 1 Step 1
+                    datalist.Add(reader(i))
+                Next
+            End While
+        Catch ex As MySqlException
+            MessageBox.Show("Error : " & ex.ToString)
+        End Try
+        conn.Close()
 
-        'Return datalist
+        Return datalist
     End Function
 
-    Public Shared Function editData(cmdtext As String)
+    Public Shared Function ExecuteData(cmdtext As String) As Boolean
         Try
             conn.Open()
             Dim cmd As New MySqlCommand(cmdtext, conn)
@@ -52,35 +51,21 @@ Public Class ConnectDB
         Return True
     End Function
 
-    Public Shared Function QueryAllDepartmentName(cmdtext As String, col As Integer)
-        connection.Open()
-        Dim cmd As New SQLiteCommand
-        cmd.Connection = connection
-        cmd.CommandText = cmdtext
-        Dim reader As SQLiteDataReader = cmd.ExecuteReader()
-        Dim datalist As New ArrayList
-        'Debug.WriteLine(rangecol)
-        While reader.Read
-            datalist.Add(reader(1))
-        End While
-        connection.Close()
+    Public Shared Function QueryGetone(cmdtext As String)
+        Dim bonus As Double
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand(cmdtext, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            While reader.Read
+                bonus = reader(0)
+            End While
+        Catch ex As MySqlException
+            MessageBox.Show("Error : " & ex.ToString)
+        End Try
+        conn.Close()
 
-        Return datalist
+        Return bonus
     End Function
 
-    Public Shared Function QueryDepartment(cmdtext As String)
-        connection.Open()
-        Dim cmd As New SQLiteCommand
-        cmd.Connection = connection
-        cmd.CommandText = cmdtext
-        Dim reader As SQLiteDataReader = cmd.ExecuteReader()
-        Dim dep_name As String
-        'Debug.WriteLine(rangecol)
-        While reader.Read
-            dep_name = reader(0)
-        End While
-        connection.Close()
-
-        Return dep_name
-    End Function
 End Class
