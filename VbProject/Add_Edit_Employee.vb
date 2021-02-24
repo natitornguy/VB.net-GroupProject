@@ -214,4 +214,5 @@ Public Class Add_Edit_Employee
         NumeberOnly(e)
         txt_salary.MaxLength = 6
     End Sub
+
 End Class
