@@ -1,17 +1,31 @@
 ﻿Public Class Login
-    Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
-        'Main_Menu(0) คือล็อกอินเป็นแอดมิน (1) คือ ผู้ใช้ธรรมดา
-        Dim user As Integer
-        If txt_username.Text = "admin" Then
-            user = 0
-        ElseIf txt_username.Text = "user" Then
-            user = 1
+
+    Private Sub checklogin(user, pw)
+
+        Dim dbuser = ConnectDB.QueryReader("SELECT emp_id,role_id 
+                                            FROM users 
+                                            WHERE username = '" & user &
+                                            "' AND PASSWORD = '" & pw & "'", 2)
+        If dbuser.count > 0 Then
+            Debug.WriteLine(dbuser(1))
+            Dim main = New Main_Menu(dbuser(1), dbuser(0))
+            main.Show()
+            Me.Close()
         Else
-            user = 1
+            MessageBox.Show("ไม่มี username หรือ password ไม่ตรง", "Error login", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt_password.Clear()
         End If
-        Dim main = New Main_Menu(user)
-        main.Show()
-        Me.Close()
+
+
+
+    End Sub
+    Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
+
+        Dim username = txt_username.Text
+        Dim pass = txt_password.Text
+        checklogin(username, pass)
+
+
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

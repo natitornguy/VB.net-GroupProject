@@ -23,7 +23,8 @@ Partial Class Cal_Bonus
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txt_department = New System.Windows.Forms.TextBox()
+        Me.cbo_grade = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -32,7 +33,6 @@ Partial Class Cal_Bonus
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.txt_lname = New System.Windows.Forms.TextBox()
         Me.btn_submit = New System.Windows.Forms.Button()
-        Me.cbo_department = New System.Windows.Forms.ComboBox()
         Me.txt_fname = New System.Windows.Forms.TextBox()
         Me.txt_salary = New System.Windows.Forms.TextBox()
         Me.btn_back = New System.Windows.Forms.Button()
@@ -42,7 +42,8 @@ Partial Class Cal_Bonus
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.txt_department)
+        Me.Panel1.Controls.Add(Me.cbo_grade)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.Label6)
@@ -51,7 +52,6 @@ Partial Class Cal_Bonus
         Me.Panel1.Controls.Add(Me.lbl_status)
         Me.Panel1.Controls.Add(Me.txt_lname)
         Me.Panel1.Controls.Add(Me.btn_submit)
-        Me.Panel1.Controls.Add(Me.cbo_department)
         Me.Panel1.Controls.Add(Me.txt_fname)
         Me.Panel1.Controls.Add(Me.txt_salary)
         Me.Panel1.Controls.Add(Me.btn_back)
@@ -60,16 +60,27 @@ Partial Class Cal_Bonus
         Me.Panel1.Size = New System.Drawing.Size(475, 488)
         Me.Panel1.TabIndex = 25
         '
-        'ComboBox1
+        'txt_department
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.White
-        Me.ComboBox1.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"S", "A", "B", "C", "D"})
-        Me.ComboBox1.Location = New System.Drawing.Point(66, 288)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(158, 33)
-        Me.ComboBox1.TabIndex = 26
+        Me.txt_department.BackColor = System.Drawing.Color.White
+        Me.txt_department.Enabled = False
+        Me.txt_department.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_department.Location = New System.Drawing.Point(66, 224)
+        Me.txt_department.Name = "txt_department"
+        Me.txt_department.PlaceholderText = "แผนก"
+        Me.txt_department.Size = New System.Drawing.Size(158, 31)
+        Me.txt_department.TabIndex = 3
+        '
+        'cbo_grade
+        '
+        Me.cbo_grade.BackColor = System.Drawing.Color.White
+        Me.cbo_grade.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.cbo_grade.FormattingEnabled = True
+        Me.cbo_grade.Items.AddRange(New Object() {"S", "A", "B", "C", "D"})
+        Me.cbo_grade.Location = New System.Drawing.Point(66, 288)
+        Me.cbo_grade.Name = "cbo_grade"
+        Me.cbo_grade.Size = New System.Drawing.Size(158, 33)
+        Me.cbo_grade.TabIndex = 4
         '
         'Label8
         '
@@ -140,7 +151,7 @@ Partial Class Cal_Bonus
         Me.txt_lname.Name = "txt_lname"
         Me.txt_lname.PlaceholderText = "นามสกุล"
         Me.txt_lname.Size = New System.Drawing.Size(158, 31)
-        Me.txt_lname.TabIndex = 11
+        Me.txt_lname.TabIndex = 1
         '
         'btn_submit
         '
@@ -150,20 +161,9 @@ Partial Class Cal_Bonus
         Me.btn_submit.Location = New System.Drawing.Point(249, 419)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(131, 36)
-        Me.btn_submit.TabIndex = 23
+        Me.btn_submit.TabIndex = 5
         Me.btn_submit.Text = "ประเมินผล"
         Me.btn_submit.UseVisualStyleBackColor = False
-        '
-        'cbo_department
-        '
-        Me.cbo_department.BackColor = System.Drawing.Color.White
-        Me.cbo_department.Enabled = False
-        Me.cbo_department.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.cbo_department.FormattingEnabled = True
-        Me.cbo_department.Location = New System.Drawing.Point(66, 224)
-        Me.cbo_department.Name = "cbo_department"
-        Me.cbo_department.Size = New System.Drawing.Size(158, 33)
-        Me.cbo_department.TabIndex = 22
         '
         'txt_fname
         '
@@ -174,7 +174,7 @@ Partial Class Cal_Bonus
         Me.txt_fname.Name = "txt_fname"
         Me.txt_fname.PlaceholderText = "ชื่อ"
         Me.txt_fname.Size = New System.Drawing.Size(158, 31)
-        Me.txt_fname.TabIndex = 9
+        Me.txt_fname.TabIndex = 0
         '
         'txt_salary
         '
@@ -185,7 +185,7 @@ Partial Class Cal_Bonus
         Me.txt_salary.Name = "txt_salary"
         Me.txt_salary.PlaceholderText = "เงินเดือน"
         Me.txt_salary.Size = New System.Drawing.Size(158, 31)
-        Me.txt_salary.TabIndex = 21
+        Me.txt_salary.TabIndex = 2
         '
         'btn_back
         '
@@ -195,7 +195,7 @@ Partial Class Cal_Bonus
         Me.btn_back.Location = New System.Drawing.Point(79, 419)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(131, 37)
-        Me.btn_back.TabIndex = 15
+        Me.btn_back.TabIndex = 6
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '
@@ -226,9 +226,9 @@ Partial Class Cal_Bonus
     Friend WithEvents lbl_status As Label
     Friend WithEvents txt_lname As TextBox
     Friend WithEvents btn_submit As Button
-    Friend WithEvents cbo_department As ComboBox
     Friend WithEvents txt_fname As TextBox
     Friend WithEvents txt_salary As TextBox
     Friend WithEvents btn_back As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbo_grade As ComboBox
+    Friend WithEvents txt_department As TextBox
 End Class

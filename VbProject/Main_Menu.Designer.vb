@@ -58,13 +58,13 @@ Partial Class Main_Menu
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(17, 103)
+        Me.Label2.Location = New System.Drawing.Point(12, 103)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 25)
+        Me.Label2.Size = New System.Drawing.Size(119, 25)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "สวัสดีคุณ"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btn_empinfo
         '
@@ -134,13 +134,13 @@ Partial Class Main_Menu
         '
         'lbl_empname
         '
-        Me.lbl_empname.AutoSize = True
         Me.lbl_empname.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_empname.Location = New System.Drawing.Point(17, 143)
+        Me.lbl_empname.Location = New System.Drawing.Point(12, 143)
         Me.lbl_empname.Name = "lbl_empname"
-        Me.lbl_empname.Size = New System.Drawing.Size(98, 25)
+        Me.lbl_empname.Size = New System.Drawing.Size(119, 25)
         Me.lbl_empname.TabIndex = 14
         Me.lbl_empname.Text = "ชื่อพนนักงาน"
+        Me.lbl_empname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'PictureBox5
         '
@@ -155,13 +155,13 @@ Partial Class Main_Menu
         '
         'lbl_empid
         '
-        Me.lbl_empid.AutoSize = True
         Me.lbl_empid.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_empid.Location = New System.Drawing.Point(17, 183)
+        Me.lbl_empid.Location = New System.Drawing.Point(12, 183)
         Me.lbl_empid.Name = "lbl_empid"
-        Me.lbl_empid.Size = New System.Drawing.Size(53, 25)
+        Me.lbl_empid.Size = New System.Drawing.Size(119, 25)
         Me.lbl_empid.TabIndex = 16
         Me.lbl_empid.Text = "ID : ??"
+        Me.lbl_empid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'P_Admin
         '
@@ -324,7 +324,6 @@ Partial Class Main_Menu
         CType(Me.btn_leave_send, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btn_bonus_view, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label2 As Label

@@ -51,7 +51,7 @@ Partial Class Add_Edit_Employee
         Me.btn_back.Location = New System.Drawing.Point(79, 419)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(131, 37)
-        Me.btn_back.TabIndex = 15
+        Me.btn_back.TabIndex = 8
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '
@@ -63,7 +63,7 @@ Partial Class Add_Edit_Employee
         Me.txt_lname.Name = "txt_lname"
         Me.txt_lname.PlaceholderText = "นามสกุล"
         Me.txt_lname.Size = New System.Drawing.Size(158, 31)
-        Me.txt_lname.TabIndex = 11
+        Me.txt_lname.TabIndex = 1
         '
         'txt_fname
         '
@@ -73,7 +73,7 @@ Partial Class Add_Edit_Employee
         Me.txt_fname.Name = "txt_fname"
         Me.txt_fname.PlaceholderText = "ชื่อ"
         Me.txt_fname.Size = New System.Drawing.Size(158, 31)
-        Me.txt_fname.TabIndex = 9
+        Me.txt_fname.TabIndex = 0
         '
         'txt_phone
         '
@@ -83,7 +83,7 @@ Partial Class Add_Edit_Employee
         Me.txt_phone.Name = "txt_phone"
         Me.txt_phone.PlaceholderText = "เบอร์โทรศัพท์"
         Me.txt_phone.Size = New System.Drawing.Size(158, 31)
-        Me.txt_phone.TabIndex = 18
+        Me.txt_phone.TabIndex = 2
         '
         'txt_address
         '
@@ -93,7 +93,7 @@ Partial Class Add_Edit_Employee
         Me.txt_address.Name = "txt_address"
         Me.txt_address.PlaceholderText = "ที่อยู่"
         Me.txt_address.Size = New System.Drawing.Size(326, 31)
-        Me.txt_address.TabIndex = 19
+        Me.txt_address.TabIndex = 4
         '
         'txt_email
         '
@@ -103,7 +103,7 @@ Partial Class Add_Edit_Employee
         Me.txt_email.Name = "txt_email"
         Me.txt_email.PlaceholderText = "อีเมล"
         Me.txt_email.Size = New System.Drawing.Size(158, 31)
-        Me.txt_email.TabIndex = 20
+        Me.txt_email.TabIndex = 3
         '
         'txt_salary
         '
@@ -113,7 +113,7 @@ Partial Class Add_Edit_Employee
         Me.txt_salary.Name = "txt_salary"
         Me.txt_salary.PlaceholderText = "เงินเดือน"
         Me.txt_salary.Size = New System.Drawing.Size(158, 31)
-        Me.txt_salary.TabIndex = 21
+        Me.txt_salary.TabIndex = 5
         '
         'cbo_department
         '
@@ -123,7 +123,7 @@ Partial Class Add_Edit_Employee
         Me.cbo_department.Location = New System.Drawing.Point(66, 352)
         Me.cbo_department.Name = "cbo_department"
         Me.cbo_department.Size = New System.Drawing.Size(158, 33)
-        Me.cbo_department.TabIndex = 22
+        Me.cbo_department.TabIndex = 6
         '
         'btn_save
         '
@@ -133,7 +133,7 @@ Partial Class Add_Edit_Employee
         Me.btn_save.Location = New System.Drawing.Point(249, 419)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(131, 37)
-        Me.btn_save.TabIndex = 23
+        Me.btn_save.TabIndex = 7
         Me.btn_save.Text = "Save & Edit"
         Me.btn_save.UseVisualStyleBackColor = False
         '
@@ -234,13 +234,13 @@ Partial Class Add_Edit_Employee
         '
         'lbl_status
         '
-        Me.lbl_status.AutoSize = True
         Me.lbl_status.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_status.Location = New System.Drawing.Point(168, 20)
+        Me.lbl_status.Location = New System.Drawing.Point(0, 20)
         Me.lbl_status.Name = "lbl_status"
-        Me.lbl_status.Size = New System.Drawing.Size(135, 25)
+        Me.lbl_status.Size = New System.Drawing.Size(475, 25)
         Me.lbl_status.TabIndex = 24
         Me.lbl_status.Text = "เพิ่มข้อมูลพนักงาน"
+        Me.lbl_status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Add_Edit_Employee
         '
