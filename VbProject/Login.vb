@@ -7,7 +7,8 @@
                                             WHERE username = '" & user &
                                             "' AND PASSWORD = '" & pw & "'", 2)
         If dbuser.count > 0 Then
-            Dim main = New Main_Menu(dbuser(0), dbuser(1))
+            Debug.WriteLine(dbuser(1))
+            Dim main = New Main_Menu(dbuser(1), dbuser(0))
             main.Show()
             Me.Close()
         Else

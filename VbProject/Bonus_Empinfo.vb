@@ -13,7 +13,13 @@
     End Sub
 
     Private Sub loaddata(param)
-        Dim sqltext = "select emp_id,CONCAT(emp_fname,' ',emp_lname) as name,emp_salary,emp_bonus,leave_count,dep_name,grade
+        Dim sqltext = "select emp_id as ID,
+                        CONCAT(emp_fname,' ',emp_lname) as NAME,
+                        emp_salary as SALARY,
+                        emp_bonus as BONUS,
+                        leave_count as LEAVE_LEFT,
+                        dep_name as DEPARTMENT,
+                        grade as GRADE
                         from employees e
                         JOIN departments d
                         ON e.DEP_ID = d.DEP_ID

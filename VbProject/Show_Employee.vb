@@ -1,9 +1,39 @@
 ﻿Public Class Show_Employee
+    Dim status As Integer
+    Dim id As Integer
 
-    Private Sub showdata()
-        Dim cmdtext = "Select * from employees"
+    Public Sub New(status As Integer, id As Integer)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+        Me.status = status
+        Me.id = id
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
+
+    Private Sub setdtg()
+        dtg_empinfo.Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        dtg_empinfo.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        dtg_empinfo.Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+    End Sub
+
+    Private Sub showdata(param)
+        Dim cmdtext = "Select * 
+                        from employees
+                        where emp_fname like '%" & param & "%' or
+                        emp_lname like '%" & param & "%'"
         Dim result = ConnectDB.QueryAdapter(cmdtext)
         dtg_empinfo.DataSource = result.Tables("data")
+        setdtg()
     End Sub
 
     Private Sub deletedata()
@@ -15,19 +45,19 @@
 
             If ConnectDB.ExecuteData(cmdtext) Then
                 MessageBox.Show("ลบข้อมููลเรียบร้อยแล้ว", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                showdata()
+                showdata("")
             End If
         End If
     End Sub
 
     Private Sub btn_back_Click(sender As Object, e As EventArgs) Handles btn_back.Click
-        Dim fmain As New Main_Menu()
+        Dim fmain As New Main_Menu(status, id)
         fmain.Show()
         Me.Close()
     End Sub
 
     Private Sub Show_Employee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        showdata()
+        showdata("")
 
     End Sub
 
@@ -36,16 +66,21 @@
     End Sub
 
     Private Sub btn_insert_Click(sender As Object, e As EventArgs) Handles btn_insert.Click
-        Dim id As Integer = dtg_empinfo.SelectedRows.Item(0).Cells(0).Value
-        Dim addfrom As New Add_Edit_Employee(id, 0)
+        Dim dtgid As Integer = dtg_empinfo.SelectedRows.Item(0).Cells(0).Value
+        Dim addfrom As New Add_Edit_Employee(id, dtgid, 0, status)
         addfrom.Show()
         Me.Close()
     End Sub
 
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
-        Dim id As Integer = dtg_empinfo.SelectedRows.Item(0).Cells(0).Value
-        Dim updatefrom As New Add_Edit_Employee(id, 1)
+        Dim dtgid As Integer = dtg_empinfo.SelectedRows.Item(0).Cells(0).Value
+        Dim updatefrom As New Add_Edit_Employee(id, dtgid, 1, status)
         updatefrom.Show()
         Me.Close()
+    End Sub
+
+    Private Sub btn_search_Click(sender As Object, e As EventArgs) Handles btn_search.Click
+        Dim name = txt_fname_search.Text
+        showdata(name)
     End Sub
 End Class

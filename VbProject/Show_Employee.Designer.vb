@@ -44,7 +44,7 @@ Partial Class Show_Employee
         Me.btn_back.Location = New System.Drawing.Point(18, 418)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(134, 37)
-        Me.btn_back.TabIndex = 11
+        Me.btn_back.TabIndex = 5
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '
@@ -53,10 +53,10 @@ Partial Class Show_Employee
         Me.btn_search.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_search.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btn_search.Location = New System.Drawing.Point(165, 66)
+        Me.btn_search.Location = New System.Drawing.Point(190, 66)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(85, 31)
-        Me.btn_search.TabIndex = 7
+        Me.btn_search.TabIndex = 1
         Me.btn_search.Text = "ค้นหา"
         Me.btn_search.UseVisualStyleBackColor = False
         '
@@ -66,9 +66,9 @@ Partial Class Show_Employee
         Me.txt_fname_search.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_fname_search.Location = New System.Drawing.Point(18, 66)
         Me.txt_fname_search.Name = "txt_fname_search"
-        Me.txt_fname_search.PlaceholderText = "กรอก ชื่อ"
-        Me.txt_fname_search.Size = New System.Drawing.Size(141, 31)
-        Me.txt_fname_search.TabIndex = 12
+        Me.txt_fname_search.PlaceholderText = "กรอก ชื่อ หรือ นามสกุล"
+        Me.txt_fname_search.Size = New System.Drawing.Size(166, 31)
+        Me.txt_fname_search.TabIndex = 0
         '
         'Panel1
         '
@@ -91,11 +91,11 @@ Partial Class Show_Employee
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(18, 38)
+        Me.Label2.Location = New System.Drawing.Point(13, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 25)
+        Me.Label2.Size = New System.Drawing.Size(188, 25)
         Me.Label2.TabIndex = 19
-        Me.Label2.Text = "ค้นหาโดย ชื่อ"
+        Me.Label2.Text = "ค้นหาโดย ชื่อ หรือ นามสกุล"
         '
         'dtg_empinfo
         '
@@ -126,7 +126,7 @@ Partial Class Show_Employee
         Me.btn_delete.Location = New System.Drawing.Point(674, 418)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(119, 37)
-        Me.btn_delete.TabIndex = 15
+        Me.btn_delete.TabIndex = 4
         Me.btn_delete.Text = "ลบข้อมูล"
         Me.btn_delete.UseVisualStyleBackColor = False
         '
@@ -138,7 +138,7 @@ Partial Class Show_Employee
         Me.btn_update.Location = New System.Drawing.Point(549, 418)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(119, 37)
-        Me.btn_update.TabIndex = 14
+        Me.btn_update.TabIndex = 3
         Me.btn_update.Text = "แก้ไขข้อมูล"
         Me.btn_update.UseVisualStyleBackColor = False
         '
@@ -150,7 +150,7 @@ Partial Class Show_Employee
         Me.btn_insert.Location = New System.Drawing.Point(424, 418)
         Me.btn_insert.Name = "btn_insert"
         Me.btn_insert.Size = New System.Drawing.Size(119, 37)
-        Me.btn_insert.TabIndex = 13
+        Me.btn_insert.TabIndex = 2
         Me.btn_insert.Text = "เพิ่มข้อมูล"
         Me.btn_insert.UseVisualStyleBackColor = False
         '

@@ -69,7 +69,7 @@ Partial Class Cal_Bonus
         Me.txt_department.Name = "txt_department"
         Me.txt_department.PlaceholderText = "แผนก"
         Me.txt_department.Size = New System.Drawing.Size(158, 31)
-        Me.txt_department.TabIndex = 32
+        Me.txt_department.TabIndex = 3
         '
         'cbo_grade
         '
@@ -80,7 +80,7 @@ Partial Class Cal_Bonus
         Me.cbo_grade.Location = New System.Drawing.Point(66, 288)
         Me.cbo_grade.Name = "cbo_grade"
         Me.cbo_grade.Size = New System.Drawing.Size(158, 33)
-        Me.cbo_grade.TabIndex = 26
+        Me.cbo_grade.TabIndex = 4
         '
         'Label8
         '
@@ -151,7 +151,7 @@ Partial Class Cal_Bonus
         Me.txt_lname.Name = "txt_lname"
         Me.txt_lname.PlaceholderText = "นามสกุล"
         Me.txt_lname.Size = New System.Drawing.Size(158, 31)
-        Me.txt_lname.TabIndex = 11
+        Me.txt_lname.TabIndex = 1
         '
         'btn_submit
         '
@@ -161,7 +161,7 @@ Partial Class Cal_Bonus
         Me.btn_submit.Location = New System.Drawing.Point(249, 419)
         Me.btn_submit.Name = "btn_submit"
         Me.btn_submit.Size = New System.Drawing.Size(131, 36)
-        Me.btn_submit.TabIndex = 23
+        Me.btn_submit.TabIndex = 5
         Me.btn_submit.Text = "ประเมินผล"
         Me.btn_submit.UseVisualStyleBackColor = False
         '
@@ -174,7 +174,7 @@ Partial Class Cal_Bonus
         Me.txt_fname.Name = "txt_fname"
         Me.txt_fname.PlaceholderText = "ชื่อ"
         Me.txt_fname.Size = New System.Drawing.Size(158, 31)
-        Me.txt_fname.TabIndex = 9
+        Me.txt_fname.TabIndex = 0
         '
         'txt_salary
         '
@@ -185,7 +185,7 @@ Partial Class Cal_Bonus
         Me.txt_salary.Name = "txt_salary"
         Me.txt_salary.PlaceholderText = "เงินเดือน"
         Me.txt_salary.Size = New System.Drawing.Size(158, 31)
-        Me.txt_salary.TabIndex = 21
+        Me.txt_salary.TabIndex = 2
         '
         'btn_back
         '
@@ -195,7 +195,7 @@ Partial Class Cal_Bonus
         Me.btn_back.Location = New System.Drawing.Point(79, 419)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(131, 37)
-        Me.btn_back.TabIndex = 15
+        Me.btn_back.TabIndex = 6
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '

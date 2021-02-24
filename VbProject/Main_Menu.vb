@@ -2,14 +2,6 @@
 
     Dim status As Integer
     Dim id As Integer
-    Public Sub New()
-
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-
-    End Sub
 
     Public Sub New(status As Integer, id As Integer)
 
@@ -23,12 +15,13 @@
     End Sub
 
     Private Sub Page()
+        Debug.WriteLine(status)
         If status = 1 Then
             P_Admin.BringToFront()
         ElseIf status = 2 Then
             P_Employee.BringToFront()
         End If
-        lbl_empid.Text = id
+        lbl_empid.Text = "User ID : " & id
         lbl_empname.Text = ConnectDB.QueryGetone("select CONCAT(emp_fname,' ',emp_lname) from employees where emp_id = " & id)
     End Sub
 
@@ -51,7 +44,7 @@
     End Sub
 
     Private Sub btn_empinfo_Click(sender As Object, e As EventArgs) Handles btn_empinfo.Click
-        Dim femp As New Show_Employee()
+        Dim femp As New Show_Employee(status, id)
         femp.Show()
         Me.Close()
     End Sub

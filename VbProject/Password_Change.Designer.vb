@@ -55,7 +55,8 @@ Partial Class Password_Change
         Me.txt_opass.Name = "txt_opass"
         Me.txt_opass.PlaceholderText = "รหัสผ่านเก่า"
         Me.txt_opass.Size = New System.Drawing.Size(186, 31)
-        Me.txt_opass.TabIndex = 4
+        Me.txt_opass.TabIndex = 1
+        Me.txt_opass.UseSystemPasswordChar = True
         '
         'txt_npass
         '
@@ -65,7 +66,8 @@ Partial Class Password_Change
         Me.txt_npass.Name = "txt_npass"
         Me.txt_npass.PlaceholderText = "รหัสผ่านใหม่"
         Me.txt_npass.Size = New System.Drawing.Size(186, 31)
-        Me.txt_npass.TabIndex = 5
+        Me.txt_npass.TabIndex = 2
+        Me.txt_npass.UseSystemPasswordChar = True
         '
         'btn_save
         '
@@ -75,7 +77,7 @@ Partial Class Password_Change
         Me.btn_save.Location = New System.Drawing.Point(209, 280)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(123, 38)
-        Me.btn_save.TabIndex = 7
+        Me.btn_save.TabIndex = 4
         Me.btn_save.Text = "เปลี่ยนรหัสผ่าน"
         Me.btn_save.UseVisualStyleBackColor = False
         '
@@ -116,7 +118,8 @@ Partial Class Password_Change
         Me.txt_cpass.Name = "txt_cpass"
         Me.txt_cpass.PlaceholderText = "ยืนยันรหัสผ่าน"
         Me.txt_cpass.Size = New System.Drawing.Size(186, 31)
-        Me.txt_cpass.TabIndex = 6
+        Me.txt_cpass.TabIndex = 3
+        Me.txt_cpass.UseSystemPasswordChar = True
         '
         'btn_back
         '
@@ -126,7 +129,7 @@ Partial Class Password_Change
         Me.btn_back.Location = New System.Drawing.Point(47, 280)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(123, 38)
-        Me.btn_back.TabIndex = 8
+        Me.btn_back.TabIndex = 5
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '

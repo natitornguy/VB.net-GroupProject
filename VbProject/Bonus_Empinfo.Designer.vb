@@ -59,7 +59,7 @@ Partial Class Bonus_Empinfo
         Me.btn_showbonus.Location = New System.Drawing.Point(571, 418)
         Me.btn_showbonus.Name = "btn_showbonus"
         Me.btn_showbonus.Size = New System.Drawing.Size(108, 37)
-        Me.btn_showbonus.TabIndex = 19
+        Me.btn_showbonus.TabIndex = 2
         Me.btn_showbonus.Text = "ดูโบนัส"
         Me.btn_showbonus.UseVisualStyleBackColor = False
         Me.btn_showbonus.Visible = False
@@ -68,7 +68,7 @@ Partial Class Bonus_Empinfo
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(16, 38)
+        Me.Label2.Location = New System.Drawing.Point(11, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(188, 25)
         Me.Label2.TabIndex = 18
@@ -104,7 +104,7 @@ Partial Class Bonus_Empinfo
         Me.btn_evaluate.Location = New System.Drawing.Point(685, 418)
         Me.btn_evaluate.Name = "btn_evaluate"
         Me.btn_evaluate.Size = New System.Drawing.Size(108, 37)
-        Me.btn_evaluate.TabIndex = 15
+        Me.btn_evaluate.TabIndex = 3
         Me.btn_evaluate.Text = "ประเมิน"
         Me.btn_evaluate.UseVisualStyleBackColor = False
         '
@@ -116,7 +116,7 @@ Partial Class Bonus_Empinfo
         Me.btn_search.Location = New System.Drawing.Point(191, 66)
         Me.btn_search.Name = "btn_search"
         Me.btn_search.Size = New System.Drawing.Size(85, 31)
-        Me.btn_search.TabIndex = 7
+        Me.btn_search.TabIndex = 1
         Me.btn_search.Text = "ค้นหา"
         Me.btn_search.UseVisualStyleBackColor = False
         '
@@ -128,7 +128,7 @@ Partial Class Bonus_Empinfo
         Me.txt_fname_search.Name = "txt_fname_search"
         Me.txt_fname_search.PlaceholderText = "กรอก ชื่อ หรือ นามสกุล"
         Me.txt_fname_search.Size = New System.Drawing.Size(167, 31)
-        Me.txt_fname_search.TabIndex = 12
+        Me.txt_fname_search.TabIndex = 0
         '
         'btn_back
         '
@@ -138,7 +138,7 @@ Partial Class Bonus_Empinfo
         Me.btn_back.Location = New System.Drawing.Point(18, 418)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(134, 37)
-        Me.btn_back.TabIndex = 11
+        Me.btn_back.TabIndex = 4
         Me.btn_back.Text = "กลับไปหน้าหลัก"
         Me.btn_back.UseVisualStyleBackColor = False
         '
