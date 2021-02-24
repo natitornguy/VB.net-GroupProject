@@ -40,7 +40,7 @@
                         from LEAVES l 
                         INNER JOIN EMPLOYEES e ON l.emp_id = e.emp_id 
                         INNER JOIN MAS_LEAVE_STATUS ml ON l.leave_status = ml.mas_leave_id 
-                        Where leave_status = 1"
+                        Where leave_status = 1 or l.emp_id = " & userid
         Else
             cmdtext = "SELECT l.LEAVE_ID AS 'ลำดับคำร้องขอ' ,
                         l.emp_id AS 'Employee ID',
