@@ -22,36 +22,21 @@ Partial Class Leave_Request
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim dtg_empleave As System.Windows.Forms.DataGridView
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dtgLeaveRequests = New System.Windows.Forms.DataGridView()
         Me.btn_admin_leave = New System.Windows.Forms.Button()
         Me.lbl_status = New System.Windows.Forms.Label()
         Me.btn_disapprove = New System.Windows.Forms.Button()
         Me.btn_approve = New System.Windows.Forms.Button()
         Me.btn_back = New System.Windows.Forms.Button()
-        dtg_empleave = New System.Windows.Forms.DataGridView()
-        CType(dtg_empleave, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.dtgLeaveRequests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'dtg_empleave
-        '
-        dtg_empleave.AllowUserToAddRows = False
-        dtg_empleave.AllowUserToDeleteRows = False
-        dtg_empleave.BackgroundColor = System.Drawing.Color.White
-        dtg_empleave.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dtg_empleave.Location = New System.Drawing.Point(17, 70)
-        dtg_empleave.Name = "dtg_empleave"
-        dtg_empleave.ReadOnly = True
-        dtg_empleave.RowTemplate.Height = 25
-        dtg_empleave.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        dtg_empleave.Size = New System.Drawing.Size(775, 294)
-        dtg_empleave.TabIndex = 18
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Panel1.Controls.Add(dtg_empleave)
+        Me.Panel1.Controls.Add(Me.dtgLeaveRequests)
         Me.Panel1.Controls.Add(Me.btn_admin_leave)
         Me.Panel1.Controls.Add(Me.lbl_status)
         Me.Panel1.Controls.Add(Me.btn_disapprove)
@@ -61,6 +46,20 @@ Partial Class Leave_Request
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(812, 442)
         Me.Panel1.TabIndex = 14
+        '
+        'dtgLeaveRequests
+        '
+        Me.dtgLeaveRequests.AllowUserToAddRows = False
+        Me.dtgLeaveRequests.AllowUserToDeleteRows = False
+        Me.dtgLeaveRequests.BackgroundColor = System.Drawing.Color.White
+        Me.dtgLeaveRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtgLeaveRequests.Location = New System.Drawing.Point(17, 80)
+        Me.dtgLeaveRequests.Name = "dtgLeaveRequests"
+        Me.dtgLeaveRequests.ReadOnly = True
+        Me.dtgLeaveRequests.RowTemplate.Height = 25
+        Me.dtgLeaveRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dtgLeaveRequests.Size = New System.Drawing.Size(775, 281)
+        Me.dtgLeaveRequests.TabIndex = 18
         '
         'btn_admin_leave
         '
@@ -132,9 +131,9 @@ Partial Class Leave_Request
         Me.Name = "Leave_Request"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Leave_Admin"
-        CType(dtg_empleave, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.dtgLeaveRequests, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -145,5 +144,8 @@ Partial Class Leave_Request
     Friend WithEvents btn_back As Button
     Friend WithEvents lbl_status As Label
     Friend WithEvents btn_admin_leave As Button
-    Friend WithEvents dtg_empleave As DataGridView
+    Friend WithEvents dtgLeaveRequests As DataGridView
+    Friend WithEvents h As DataGridView
+    Friend WithEvents t As DataGridView
+    Friend WithEvents hnket As DataGridView
 End Class
