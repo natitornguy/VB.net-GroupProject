@@ -2,7 +2,7 @@
 'ทำ Try Catch ด้วย
 Public Class ConnectDB
 
-    Private Shared conString As String = "server=localhost;userid=root;password=admin;database=hrdb"
+    Private Shared conString As String = "server=localhost;userid=root;password=admin;database=hrdb;CharSet=utf8"
     Private Shared conn = New MySqlConnection(conString)
 
     Public Shared Function QueryAdapter(cmdtext As String) As DataSet

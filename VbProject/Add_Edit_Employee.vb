@@ -60,9 +60,9 @@ Public Class Add_Edit_Employee
 
     End Sub
     Private Sub idgenerate()
-        Dim fname = txt_fname.Text
-        Dim lname = txt_lname.Text
-        Dim pphone = txt_phone.Text.Replace("-", "")
+        Dim fname = txt_fname.Text.ToLower
+        Dim lname = txt_lname.Text.ToLower
+        Dim pphone = txt_phone.Text
         Dim username = lname.Substring(0, 2) & "." & fname
         Dim sqlempid As Integer = ConnectDB.QueryGetone("SELECT emp_id 
                                                         FROM employees 
