@@ -68,7 +68,7 @@ Partial Class Leave_User
         '
         Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBack.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnBack.Location = New System.Drawing.Point(126, 491)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(134, 41)
@@ -79,66 +79,66 @@ Partial Class Leave_User
         'txtRemaining
         '
         Me.txtRemaining.BackColor = System.Drawing.Color.White
-        Me.txtRemaining.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtRemaining.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txtRemaining.Location = New System.Drawing.Point(255, 173)
         Me.txtRemaining.Name = "txtRemaining"
         Me.txtRemaining.ReadOnly = True
-        Me.txtRemaining.Size = New System.Drawing.Size(152, 31)
+        Me.txtRemaining.Size = New System.Drawing.Size(152, 26)
         Me.txtRemaining.TabIndex = 21
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(23, 173)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(169, 25)
+        Me.Label2.Size = New System.Drawing.Size(151, 20)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "จำนวนครั้งการลาที่เหลือ"
         '
         'txtFullname
         '
         Me.txtFullname.BackColor = System.Drawing.Color.White
-        Me.txtFullname.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtFullname.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txtFullname.Location = New System.Drawing.Point(255, 123)
         Me.txtFullname.Name = "txtFullname"
         Me.txtFullname.ReadOnly = True
-        Me.txtFullname.Size = New System.Drawing.Size(209, 31)
+        Me.txtFullname.Size = New System.Drawing.Size(209, 26)
         Me.txtFullname.TabIndex = 19
         '
         'txtEmpID
         '
         Me.txtEmpID.BackColor = System.Drawing.Color.White
-        Me.txtEmpID.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtEmpID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txtEmpID.Location = New System.Drawing.Point(255, 73)
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.ReadOnly = True
-        Me.txtEmpID.Size = New System.Drawing.Size(152, 31)
+        Me.txtEmpID.Size = New System.Drawing.Size(152, 26)
         Me.txtEmpID.TabIndex = 18
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(110, 123)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 25)
+        Me.Label3.Size = New System.Drawing.Size(82, 20)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "ชื่อ-นามสกุล"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label8.Location = New System.Drawing.Point(105, 73)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(98, 25)
+        Me.Label8.Size = New System.Drawing.Size(84, 20)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "รหัสพนักงาน"
         '
         'Label1
         '
-        Me.Label1.Font = New System.Drawing.Font("Kanit", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(0, 11)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(539, 43)
@@ -150,7 +150,7 @@ Partial Class Leave_User
         '
         Me.btn_send_leave.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_send_leave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_send_leave.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_send_leave.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_send_leave.Location = New System.Drawing.Point(288, 491)
         Me.btn_send_leave.Name = "btn_send_leave"
         Me.btn_send_leave.Size = New System.Drawing.Size(134, 41)
@@ -161,44 +161,44 @@ Partial Class Leave_User
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(147, 277)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 25)
+        Me.Label6.Size = New System.Drawing.Size(51, 20)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "ถึงวันที่"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(92, 223)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(108, 25)
+        Me.Label5.Size = New System.Drawing.Size(95, 20)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "หยุดตั้งแต่วันที่"
         '
         'dtp_end
         '
-        Me.dtp_end.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.dtp_end.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.dtp_end.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_end.Location = New System.Drawing.Point(255, 280)
         Me.dtp_end.Name = "dtp_end"
-        Me.dtp_end.Size = New System.Drawing.Size(152, 31)
+        Me.dtp_end.Size = New System.Drawing.Size(152, 26)
         Me.dtp_end.TabIndex = 8
         '
         'dtp_start
         '
-        Me.dtp_start.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.dtp_start.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.dtp_start.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtp_start.Location = New System.Drawing.Point(255, 223)
         Me.dtp_start.Name = "dtp_start"
-        Me.dtp_start.Size = New System.Drawing.Size(152, 31)
+        Me.dtp_start.Size = New System.Drawing.Size(152, 26)
         Me.dtp_start.TabIndex = 7
         '
         'txt_reason
         '
-        Me.txt_reason.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_reason.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_reason.Location = New System.Drawing.Point(255, 334)
         Me.txt_reason.Multiline = True
         Me.txt_reason.Name = "txt_reason"
@@ -208,10 +208,10 @@ Partial Class Leave_User
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(51, 327)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(144, 25)
+        Me.Label4.Size = New System.Drawing.Size(130, 20)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "เหตุผลในการลาหยุด"
         '

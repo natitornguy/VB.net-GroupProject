@@ -20,14 +20,18 @@ Public Class Leave_User
         Dim fromDate = dateFromEng.ToString("yyyy-MM-dd", _cultureEnInfo)
         Dim toDate = dateToEng.ToString("yyyy-MM-dd", _cultureEnInfo)
         Dim reason = Encoding.UTF8.GetString(Encoding.UTF8.GetBytes(txt_reason.Text))
-
-        Dim sql = "INSERT INTO leaves (EMP_ID,LEAVE_STATUS,LEAVE_FROM,LEAVE_TO,LEAVE_REASON) VALUES (" & emp_id & ", 1 , '" & fromDate & "' , '" & toDate & "' ,'" & reason & "')"
-        If ConnectDB.ExecuteData(sql) Then
-            MessageBox.Show("ทำการบันทึกแบบฟอร์มการลาเรียบร้อย", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Dim fleave As New Leave_Request(status, userid)
-            fleave.Show()
-            Me.Close()
+        If reason.Length = 0 Then
+            MessageBox.Show("กรุณากรอกสาเหตุ", "คำเตือน", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+            Dim sql = "INSERT INTO leaves (EMP_ID,LEAVE_STATUS,LEAVE_FROM,LEAVE_TO,LEAVE_REASON) VALUES (" & emp_id & ", 1 , '" & fromDate & "' , '" & toDate & "' ,'" & reason & "')"
+            If ConnectDB.ExecuteData(sql) Then
+                MessageBox.Show("ทำการบันทึกแบบฟอร์มการลาเรียบร้อย", "สำเร็จ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Dim fleave As New Leave_Request(status, userid)
+                fleave.Show()
+                Me.Close()
+            End If
         End If
+
 
     End Sub
 

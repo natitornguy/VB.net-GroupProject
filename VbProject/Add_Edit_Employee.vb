@@ -165,6 +165,7 @@ Public Class Add_Edit_Employee
         Dim address = txt_address.Text
         Dim salary = txt_salary.Text
         Dim department = cbo_department.Text
+        Dim phone = txt_phone.Text
         If address.Length = 0 Then
             res = False
         End If
@@ -172,6 +173,9 @@ Public Class Add_Edit_Employee
             res = False
         End If
         If department.Length = 0 Then
+            res = False
+        End If
+        If phone.Length = 0 Then
             res = False
         End If
         Return res
@@ -185,27 +189,26 @@ Public Class Add_Edit_Employee
 
         Dim checklname = showMatch(txt_lname.Text, "^[a-zA-Z\s]+$")
         Dim checklnameth = showMatch(txt_lname.Text, "^[ก-๏\s]+$")
-
-        If (checkfname Or checkfnameth) Then
-            If (checklname Or checklnameth) Then
-                If checkemail Then
-                    If CheckInput() Then
+        If CheckInput() Then
+            If (checkfname Or checkfnameth) Then
+                If (checklname Or checklnameth) Then
+                    If checkemail Then
                         If status = 0 Then
                             insertData()
                         ElseIf status = 1 Then
                             updateData()
                         End If
                     Else
-                        MessageBox.Show("กรุณากรอกข้อมูลให้ครบถ้วน", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                        MessageBox.Show("กรุณากรอกอีเมล .com \nและต้องไม่มีอักษรพิเศษก่อนถึง @", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                     End If
                 Else
-                    MessageBox.Show("กรุณากรอกอีเมล .com \nและต้องไม่มีอักษรพิเศษก่อนถึง @", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    MessageBox.Show("กรุณากรอกนามสกุลด้วยตัวอักษรเท่านั้น", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 End If
             Else
-                MessageBox.Show("กรุณากรอกนามสกุลด้วยตัวอักษรเท่านั้น", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("กรุณากรอกชื่อด้วยตัวอักษรเท่านั้น", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
-            MessageBox.Show("กรุณากรอกชื่อด้วยตัวอักษรเท่านั้น", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("กรุณากรอกข้อมูลให้ครบถ้วน", "warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
 
