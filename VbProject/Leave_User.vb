@@ -14,8 +14,11 @@ Public Class Leave_User
     End Sub
     Private Sub btn_send_leave_Click(sender As Object, e As EventArgs) Handles btn_send_leave.Click
         Dim emp_id = CInt(txtEmpID.Text)
-        Dim fromDate = dtp_start.Value.ToString("yyyy-MM-dd")
-        Dim toDate = dtp_end.Value.ToString("yyyy-MM-dd")
+        Dim _cultureEnInfo As New Globalization.CultureInfo("en-US")
+        Dim dateFromEng As DateTime = Convert.ToDateTime(dtp_start.Value, _cultureEnInfo)
+        Dim dateToEng As DateTime = Convert.ToDateTime(dtp_end.Value, _cultureEnInfo)
+        Dim fromDate = dateFromEng.ToString("yyyy-MM-dd", _cultureEnInfo)
+        Dim toDate = dateToEng.ToString("yyyy-MM-dd", _cultureEnInfo)
         Dim reason = Encoding.UTF8.GetString(Encoding.UTF8.GetBytes(txt_reason.Text))
 
         Dim sql = "INSERT INTO leaves (EMP_ID,LEAVE_STATUS,LEAVE_FROM,LEAVE_TO,LEAVE_REASON) VALUES (" & emp_id & ", 1 , '" & fromDate & "' , '" & toDate & "' ,'" & reason & "')"
