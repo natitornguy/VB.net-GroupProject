@@ -40,32 +40,33 @@ Partial Class Password_Change
         'txt_username
         '
         Me.txt_username.BackColor = System.Drawing.Color.White
-        Me.txt_username.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_username.Location = New System.Drawing.Point(137, 60)
         Me.txt_username.Name = "txt_username"
         Me.txt_username.PlaceholderText = "ชื่อผู้ใช้"
-        Me.txt_username.Size = New System.Drawing.Size(186, 31)
+        Me.txt_username.ReadOnly = True
+        Me.txt_username.Size = New System.Drawing.Size(186, 26)
         Me.txt_username.TabIndex = 0
         '
         'txt_opass
         '
         Me.txt_opass.BackColor = System.Drawing.Color.White
-        Me.txt_opass.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_opass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_opass.Location = New System.Drawing.Point(137, 109)
         Me.txt_opass.Name = "txt_opass"
         Me.txt_opass.PlaceholderText = "รหัสผ่านเก่า"
-        Me.txt_opass.Size = New System.Drawing.Size(186, 31)
+        Me.txt_opass.Size = New System.Drawing.Size(186, 26)
         Me.txt_opass.TabIndex = 1
         Me.txt_opass.UseSystemPasswordChar = True
         '
         'txt_npass
         '
         Me.txt_npass.BackColor = System.Drawing.Color.White
-        Me.txt_npass.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_npass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_npass.Location = New System.Drawing.Point(137, 159)
         Me.txt_npass.Name = "txt_npass"
         Me.txt_npass.PlaceholderText = "รหัสผ่านใหม่"
-        Me.txt_npass.Size = New System.Drawing.Size(186, 31)
+        Me.txt_npass.Size = New System.Drawing.Size(186, 26)
         Me.txt_npass.TabIndex = 2
         Me.txt_npass.UseSystemPasswordChar = True
         '
@@ -73,7 +74,7 @@ Partial Class Password_Change
         '
         Me.btn_save.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_save.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_save.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_save.Location = New System.Drawing.Point(209, 280)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(123, 38)
@@ -103,21 +104,21 @@ Partial Class Password_Change
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(16, 211)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 25)
+        Me.Label5.Size = New System.Drawing.Size(92, 20)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "ยืนยันรหัสผ่าน"
         '
         'txt_cpass
         '
         Me.txt_cpass.BackColor = System.Drawing.Color.White
-        Me.txt_cpass.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_cpass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_cpass.Location = New System.Drawing.Point(137, 208)
         Me.txt_cpass.Name = "txt_cpass"
         Me.txt_cpass.PlaceholderText = "ยืนยันรหัสผ่าน"
-        Me.txt_cpass.Size = New System.Drawing.Size(186, 31)
+        Me.txt_cpass.Size = New System.Drawing.Size(186, 26)
         Me.txt_cpass.TabIndex = 3
         Me.txt_cpass.UseSystemPasswordChar = True
         '
@@ -125,7 +126,7 @@ Partial Class Password_Change
         '
         Me.btn_back.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_back.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_back.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_back.Location = New System.Drawing.Point(47, 280)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(123, 38)
@@ -136,40 +137,40 @@ Partial Class Password_Change
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(16, 162)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 25)
+        Me.Label4.Size = New System.Drawing.Size(84, 20)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "รหัสผ่านใหม่"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(16, 112)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(89, 25)
+        Me.Label3.Size = New System.Drawing.Size(80, 20)
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "รหัสผ่านเก่า"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(16, 63)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 25)
+        Me.Label2.Size = New System.Drawing.Size(51, 20)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "ชื่อผู้ใช้"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Kanit", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(124, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 25)
+        Me.Label1.Size = New System.Drawing.Size(130, 20)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "ระบบเปลี่ยนรหัสผ่าน"
         '

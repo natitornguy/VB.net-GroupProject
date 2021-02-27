@@ -59,6 +59,6 @@
                                             FROM users
                                             WHERE emp_id = " & id)
         txt_username.Text = username
-
+        txt_opass.Select()
     End Sub
 End Class

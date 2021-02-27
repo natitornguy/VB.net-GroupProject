@@ -1,5 +1,4 @@
-﻿Imports System.Data.SQLite
-Imports System.Text
+﻿Imports System.Text
 Public Class Leave_User
     Dim status As Integer
     Dim userid As Integer = 1
@@ -36,7 +35,9 @@ Public Class Leave_User
     End Sub
 
     Private Sub Leave_User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dtp_start.MinDate = Date.Now
+        dtp_start.CustomFormat = "dd/MMM/yyyy"
+        dtp_end.CustomFormat = "dd/MMM/yyyy"
+        dtp_start.MinDate = Date.Now.AddDays(3)
         dtp_end.Enabled = False
         txtEmpID.Text = userid
         Dim result = ConnectDB.QueryReader("SELECT CONCAT(e.EMP_FNAME, ' ', e.EMP_LNAME) AS FullName, e.LEAVE_COUNT FROM employees e WHERE e.EMP_ID = " & userid, 2)

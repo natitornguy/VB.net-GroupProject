@@ -181,7 +181,7 @@ Partial Class Leave_User
         'dtp_end
         '
         Me.dtp_end.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.dtp_end.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtp_end.Location = New System.Drawing.Point(255, 280)
         Me.dtp_end.Name = "dtp_end"
         Me.dtp_end.Size = New System.Drawing.Size(152, 26)
@@ -190,7 +190,7 @@ Partial Class Leave_User
         'dtp_start
         '
         Me.dtp_start.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.dtp_start.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp_start.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtp_start.Location = New System.Drawing.Point(255, 223)
         Me.dtp_start.Name = "dtp_start"
         Me.dtp_start.Size = New System.Drawing.Size(152, 26)
