@@ -46,18 +46,18 @@ Partial Class Login
         '
         'txt_username
         '
-        Me.txt_username.Font = New System.Drawing.Font("Kanit", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_username.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_username.Location = New System.Drawing.Point(195, 126)
         Me.txt_username.Name = "txt_username"
-        Me.txt_username.Size = New System.Drawing.Size(173, 27)
+        Me.txt_username.Size = New System.Drawing.Size(173, 22)
         Me.txt_username.TabIndex = 1
         '
         'txt_password
         '
-        Me.txt_password.Font = New System.Drawing.Font("Kanit", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txt_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.749999!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txt_password.Location = New System.Drawing.Point(195, 194)
         Me.txt_password.Name = "txt_password"
-        Me.txt_password.Size = New System.Drawing.Size(173, 27)
+        Me.txt_password.Size = New System.Drawing.Size(173, 22)
         Me.txt_password.TabIndex = 2
         Me.txt_password.UseSystemPasswordChar = True
         '
@@ -65,7 +65,7 @@ Partial Class Login
         '
         Me.btn_login.BackColor = System.Drawing.Color.FromArgb(CType(CType(191, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btn_login.Font = New System.Drawing.Font("Kanit", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btn_login.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_login.Location = New System.Drawing.Point(204, 253)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(122, 48)
@@ -98,10 +98,10 @@ Partial Class Login
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Kanit", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(195, 99)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 24)
+        Me.Label2.Size = New System.Drawing.Size(77, 18)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Username"
         '
@@ -109,10 +109,10 @@ Partial Class Login
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer), CType(CType(241, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Kanit", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(195, 167)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 24)
+        Me.Label3.Size = New System.Drawing.Size(75, 18)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Password"
         '

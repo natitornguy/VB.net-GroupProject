@@ -35,7 +35,7 @@
                         l.emp_id AS 'รหัสประจำตัวพนักงาน',
                         concat(e.emp_fname,' ', e.emp_lname) AS 'ชื่อพนักงาน',
                         ml.mas_leave_name AS 'สถานะคำร้องขอ',
-                        l.LEAVE_FROM as 'วันที่ลา',l.LEAVE_TO as 'ถึงวันที่',
+                        DATE_FORMAT(l.LEAVE_FROM,'%d/%M/%Y') as 'วันที่ลา',DATE_FORMAT(l.LEAVE_TO,'%d/%M/%Y') as 'ถึงวันที่',
                         l.LEAVE_REASON AS 'เหตุผล' 
                         from LEAVES l 
                         INNER JOIN EMPLOYEES e ON l.emp_id = e.emp_id 
@@ -43,9 +43,9 @@
                         Where leave_status = 1 or l.emp_id = " & userid
         Else
             cmdtext = "SELECT l.LEAVE_ID AS 'ลำดับคำร้องขอ' ,
-                        l.emp_id AS 'Employee ID',
+                        l.emp_id AS 'รหัสประจำตัวพนักงาน',
                         concat(e.emp_fname,' ', e.emp_lname) AS 'Employee Name',
-                        ml.mas_leave_name AS 'Status',
+                        ml.mas_leave_name AS 'สถานะคำร้องขอ',
                         l.LEAVE_FROM as 'วันที่ลา',
                         l.LEAVE_TO as 'ถึงวันที่',
                         l.LEAVE_REASON AS 'เหตุผล' 

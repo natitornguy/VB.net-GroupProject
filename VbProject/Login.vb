@@ -32,5 +32,9 @@
 
     End Sub
 
-
+    Private Sub txt_password_KeyDown(sender As Object, e As KeyEventArgs) Handles txt_password.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btn_login_Click(sender, e)
+        End If
+    End Sub
 End Class
